@@ -1,0 +1,99 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#calendar {
+  min-height: 100vh;
+  overflow-y: auto;
+  background-color: #e6f5ff; /* Azul claro */
+  border-radius: 10px;
+}
+
+#calendar a,
+#calendar .fc-daygrid-day a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+#top {
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+.fc-header-toolbar {
+  background-color: #ff9999; /* Rosa claro */
+  color: #ffffff;
+  border-radius: 10px 10px 0 0;
+}
+
+.fc-header-toolbar button,
+.fc-button-group button {
+  color: #ffffff !important;
+  background-color: #66cccc; /* Azul verdoso */
+  border-color: #66cccc;
+}
+
+.fc-button-group button:hover {
+  background-color: #ffb366; /* Naranja claro */
+  border-color: #ffb366;
+}
+
+.fc-day-header,
+.fc-day {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.fc-day {
+  border: 1px solid lightgreen; /* Azul claro */
+}
+
+.fc-day.fc-day-selected {
+  background-color: #ff6666; /* Rojo claro */
+  color: #ffffff;
+}
+
+.modal-content {
+  background-color: #f0f0f0; /* Gris claro */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content button {
+  border-radius: 5px;
+}
+
+.modal-content button.btn-primary {
+  background-color: #99cc99; /* Verde claro */
+  border-color: #99cc99;
+}
+
+.modal-content button.btn-primary:hover {
+  background-color: #669966; /* Verde oscuro */
+  border-color: #669966;
+}
+
+.modal-content button.btn-secondary {
+  background-color: #ffcc99; /* Melocotón */
+  border-color: #ffcc99;
+}
+
+.modal-content button.btn-secondary:hover {
+  background-color: #ff9966; /* Naranja */
+  border-color: #ff9966;
+}
+
+.fc-day:hover {
+  background-color: #e0e0e0; /* Gris claro */
+}
+
+footer {
+  text-align: right;
+  padding: 10px;
+  bottom: 10px;
+  right: 10px;
+}
