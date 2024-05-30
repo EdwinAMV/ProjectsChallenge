@@ -55,4 +55,12 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(Event::class);
     }
+
+    /**
+     * Relación One-to-Many con la tabla de puntuaciones.
+     */
+    public function scores()
+    {
+        return $this->hasMany(Score::class);
+    }
 }

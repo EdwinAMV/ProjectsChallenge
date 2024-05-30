@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('calendar')" :active="request()->routeIs('calendar')">
                         {{ __('Calendar') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('sqword')" :active="request()->routeIs('sqword')">
+                        {{ __('SQWORD Game') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -75,6 +78,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('calendar')" :active="request()->routeIs('calendar')">
                 {{ __('Calendario') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('sqword')" :active="request()->routeIs('sqword')">
+                {{ __('SQWORD Game') }}
             </x-responsive-nav-link>
         </div>
 

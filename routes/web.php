@@ -40,4 +40,7 @@ Route::post('/event/store', [EventController::class, 'store'])->name('event.stor
 Route::put('/event/update/{id}', [EventController::class, 'update'])->name('event.update');
 Route::delete('/event/destroy/{id}', [EventController::class, 'destroy'])->name('event.destroy');
 
+//VIEW SQWORD
+Route::view('/sqword','DEVCHALLENGE4/sqword')->middleware('auth')->name('sqword');
+
 require __DIR__.'/auth.php';
