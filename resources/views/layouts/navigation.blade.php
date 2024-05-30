@@ -16,7 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('calendar')" :active="request()->routeIs('calendar')">
-                        {{ __('Calendario') }}
+                        {{ __('Calendar') }}
                     </x-nav-link>
                 </div>
             </div>

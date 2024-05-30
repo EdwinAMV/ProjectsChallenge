@@ -9,14 +9,14 @@ import './bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 document.addEventListener('DOMContentLoaded', function () {
-    var initialLocaleCode = 'es';
+    var initialLocaleCode = 'en';
     var calendarEl = document.getElementById('calendar');
     var eventModal = new Modal(document.getElementById('eventModal'));
     var editEventModal = new Modal(document.getElementById('editEventModal'));
 
     var calendar = new Calendar(calendarEl, {
         locales: allLocales,
-        locale: 'es',
+        locale: 'en',
         plugins: [dayGridPlugin, interactionPlugin, multiMonthPlugin, timeGridPlugin],
         initialView: 'multiMonthYear',
         headerToolbar: {
@@ -25,11 +25,13 @@ document.addEventListener('DOMContentLoaded', function () {
             right: 'timeGridWeek,timeGridDay,dayGridMonth,multiMonthYear',
         },
         dateClick: function (info) {
-            if (calendar.view.type !== 'timeGridDay') {
-                calendar.changeView('timeGridDay', info.dateStr);
-            } else {
-                openEventModal(info.date);
-            }
+            // if (calendar.view.type !== 'timeGridDay') {
+            //     calendar.changeView('timeGridDay', info.dateStr);
+            // } else {
+            //     openEventModal(info.date);
+            // }
+
+            openEventModal(info.date);
         },
         eventClick: function (info) {
             openEditEventModal(info);
@@ -79,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('#editForm').action = document.querySelector('#editForm').action.replace('__id__', event.id);
         document.querySelector('#nameEdit').value = event.title;
         document.querySelector('#descriptionEdit').value = event.extendedProps.description;
+        document.querySelector('#colorEdit').value = event.backgroundColor;
 
         var eventColor = event.backgroundColor;
 
